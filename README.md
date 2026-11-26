@@ -90,7 +90,7 @@ Variants of the same layout (`us` and `us+dvorak`, for example) are treated as s
 ## Project structure
 
 ```text
-layout_indicator@tsv-tech/
+layout-indicator@tsv-tech/
 ├── extension.js              # Entry point: enable()/disable(), reacts to layout changes
 ├── metadata.json             # Extension metadata
 ├── prefs.js                  # Entry point of the preferences window
@@ -120,7 +120,7 @@ From the folder with the source files:
 
 ```bash
 gnome-extensions pack --extra-source=lib --extra-source=prefs --extra-source=shared --force .
-gnome-extensions install --force layout_indicator@tsv-tech.shell-extension.zip
+gnome-extensions install --force layout-indicator@tsv-tech.shell-extension.zip
 ```
 
 `gnome-extensions pack` compiles the schema automatically.
@@ -130,7 +130,7 @@ gnome-extensions install --force layout_indicator@tsv-tech.shell-extension.zip
 1. Create the extension folder. Its name must match the `uuid` in `metadata.json`:
 
    ```bash
-   mkdir -p ~/.local/share/gnome-shell/extensions/layout_indicator@tsv-tech
+   mkdir -p ~/.local/share/gnome-shell/extensions/layout-indicator@tsv-tech
    ```
 
 2. Copy everything from the project structure above into it: `extension.js`, `prefs.js`, `metadata.json` and the `lib/`, `prefs/`, `shared/` and `schemas/` folders.
@@ -138,7 +138,7 @@ gnome-extensions install --force layout_indicator@tsv-tech.shell-extension.zip
 3. Compile the schema:
 
    ```bash
-   glib-compile-schemas ~/.local/share/gnome-shell/extensions/layout_indicator@tsv-tech/schemas/
+   glib-compile-schemas ~/.local/share/gnome-shell/extensions/layout-indicator@tsv-tech/schemas/
    ```
 
 ### Then
@@ -150,7 +150,7 @@ gnome-extensions install --force layout_indicator@tsv-tech.shell-extension.zip
 2. **Enable the extension:**
 
    ```bash
-   gnome-extensions enable layout_indicator@tsv-tech
+   gnome-extensions enable layout-indicator@tsv-tech
    ```
 
 ---
@@ -160,7 +160,7 @@ gnome-extensions install --force layout_indicator@tsv-tech.shell-extension.zip
 Open the preferences window:
 
 ```bash
-gnome-extensions prefs layout_indicator@tsv-tech
+gnome-extensions prefs layout-indicator@tsv-tech
 ```
 
 Or click the settings button next to **Layout Indicator** in the Extensions app or in Extension Manager.

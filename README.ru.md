@@ -90,7 +90,7 @@
 ## Структура проекта
 
 ```text
-layout_indicator@tsv-tech/
+layout-indicator@tsv-tech/
 ├── extension.js              # Точка входа: enable()/disable(), реакция на смену раскладки
 ├── metadata.json             # Метаданные расширения
 ├── prefs.js                  # Точка входа окна настроек
@@ -120,7 +120,7 @@ layout_indicator@tsv-tech/
 
 ```bash
 gnome-extensions pack --extra-source=lib --extra-source=prefs --extra-source=shared --force .
-gnome-extensions install --force layout_indicator@tsv-tech.shell-extension.zip
+gnome-extensions install --force layout-indicator@tsv-tech.shell-extension.zip
 ```
 
 `gnome-extensions pack` сам компилирует схему.
@@ -130,7 +130,7 @@ gnome-extensions install --force layout_indicator@tsv-tech.shell-extension.zip
 1. Создайте папку расширения. Её имя должно совпадать с `uuid` из `metadata.json`:
 
    ```bash
-   mkdir -p ~/.local/share/gnome-shell/extensions/layout_indicator@tsv-tech
+   mkdir -p ~/.local/share/gnome-shell/extensions/layout-indicator@tsv-tech
    ```
 
 2. Скопируйте в неё всё из структуры проекта выше: `extension.js`, `prefs.js`, `metadata.json` и папки `lib/`, `prefs/`, `shared/` и `schemas/`.
@@ -138,7 +138,7 @@ gnome-extensions install --force layout_indicator@tsv-tech.shell-extension.zip
 3. Скомпилируйте схему:
 
    ```bash
-   glib-compile-schemas ~/.local/share/gnome-shell/extensions/layout_indicator@tsv-tech/schemas/
+   glib-compile-schemas ~/.local/share/gnome-shell/extensions/layout-indicator@tsv-tech/schemas/
    ```
 
 ### Затем
@@ -150,7 +150,7 @@ gnome-extensions install --force layout_indicator@tsv-tech.shell-extension.zip
 2. **Включите расширение:**
 
    ```bash
-   gnome-extensions enable layout_indicator@tsv-tech
+   gnome-extensions enable layout-indicator@tsv-tech
    ```
 
 ---
@@ -160,7 +160,7 @@ gnome-extensions install --force layout_indicator@tsv-tech.shell-extension.zip
 Откройте окно настроек:
 
 ```bash
-gnome-extensions prefs layout_indicator@tsv-tech
+gnome-extensions prefs layout-indicator@tsv-tech
 ```
 
 Или нажмите кнопку настроек рядом с **Layout Indicator** в приложении «Расширения» или в Extension Manager.
@@ -186,7 +186,7 @@ dconf reset -f /org/gnome/shell/extensions/layout-indicator/
 
 ## Решение проблем
 
-* **Расширения нет в выводе `gnome-extensions list`.** Проверьте, что папка называется именно `~/.local/share/gnome-shell/extensions/layout_indicator@tsv-tech`. На Wayland ещё нужно выйти из сеанса и войти снова.
+* **Расширения нет в выводе `gnome-extensions list`.** Проверьте, что папка называется именно `~/.local/share/gnome-shell/extensions/layout-indicator@tsv-tech`. На Wayland ещё нужно выйти из сеанса и войти снова.
 * **Окно настроек не открывается с ошибкой `schema_id`.** Скомпилируйте схему ещё раз (шаг 3 варианта Б) и проверьте, что в `metadata.json` есть `"settings-schema": "org.gnome.shell.extensions.layout-indicator"`.
 * **Команда не запускается.** Для конвейеров и перенаправлений нужен `sh -c '…'`, а программа должна быть в `PATH`. Ошибки попадают в журнал.
 * **Журнал:**
