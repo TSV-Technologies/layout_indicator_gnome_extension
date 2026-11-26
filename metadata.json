@@ -1,0 +1,8 @@
+{
+  "uuid": "layout-indicator@tsv-tech",
+  "name": "Layout Indicator",
+  "description": "Shows the active keyboard layout with a colored screen border, a line under the top bar and the system accent color. Colors are configurable per layout.\n\nOptionally writes the current layout to $XDG_RUNTIME_DIR/layout-indicator and runs a user-defined command on every layout switch.",
+  "shell-version": ["47", "48", "49", "50"],
+  "url": "https://github.com/TSV-Technologies/layout_indicator_gnome_extension",
+  "settings-schema": "org.gnome.shell.extensions.layout-indicator"
+}

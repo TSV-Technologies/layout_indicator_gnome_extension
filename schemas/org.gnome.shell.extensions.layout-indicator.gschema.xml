@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.layout-indicator" path="/org/gnome/shell/extensions/layout-indicator/">
+    <key name="enable-panel-bar" type="b">
+      <default>false</default>
+      <summary>Enable top bar bottom line</summary>
+    </key>
+    <key name="panel-bar-width" type="i">
+      <range min="1" max="10"/>
+      <default>2</default>
+      <summary>Top bar bottom line width (px)</summary>
+    </key>
+    <key name="enable-screen-border" type="b">
+      <default>true</default>
+      <summary>Enable screen border</summary>
+    </key>
+    <key name="screen-border-width" type="i">
+      <range min="1" max="15"/>
+      <default>3</default>
+      <summary>Screen border width (px)</summary>
+    </key>
+    <key name="border-top" type="b">
+      <default>true</default>
+      <summary>Draw top screen border</summary>
+    </key>
+    <key name="border-bottom" type="b">
+      <default>true</default>
+      <summary>Draw bottom screen border</summary>
+    </key>
+    <key name="border-left" type="b">
+      <default>true</default>
+      <summary>Draw left screen border</summary>
+    </key>
+    <key name="border-right" type="b">
+      <default>true</default>
+      <summary>Draw right screen border</summary>
+    </key>
+    <key name="enable-accent-color" type="b">
+      <default>false</default>
+      <summary>Enable system accent color</summary>
+    </key>
+    <key name="enable-custom-command" type="b">
+      <default>false</default>
+      <summary>Run a command on layout change</summary>
+    </key>
+    <key name="custom-command" type="s">
+      <default>''</default>
+      <summary>Command executed on layout change</summary>
+      <description>Parsed like a shell command line, but not run through a shell. ${layout} and ${body} are replaced in each argument.</description>
+    </key>
+    <key name="language-configs" type="s">
+      <default>'{}'</default>
+      <summary>Per-layout colors (JSON)</summary>
+    </key>
+  </schema>
+</schemalist>
