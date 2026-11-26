@@ -8,6 +8,15 @@
 
 ---
 
+Быстрая установка
+Выполните следующую команду в терминале, чтобы скачать и установить последний релиз:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/TSV-Technologies/layout_indicator_gnome_extension/main/install.sh | bash
+```
+
+---
+
 ## Возможности
 
 ### 1. Три независимых визуальных индикатора

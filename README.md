@@ -8,6 +8,16 @@ It reacts to the `current-source-changed` signal and never polls. It supports mu
 
 ---
 
+## Quick Installation
+
+Run the following command in your terminal to download and install the latest release:	
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/TSV-Technologies/layout_indicator_gnome_extension/main/install.sh | bash
+```
+
+---
+
 ## Features
 
 ### 1. Three independent visual indicators
